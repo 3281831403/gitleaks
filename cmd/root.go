@@ -387,6 +387,11 @@ func Detector(cmd *cobra.Command, cfg config.Config, source string) *detect.Dete
 		case "sarif":
 			reporter = &report.SarifReporter{
 				OrderedRules: cfg.GetOrderedRules(),
+				// Emit artifact URIs relative to the scan root so that
+				// results map back to repository files regardless of
+				// whether the source was passed as an absolute or
+				// relative path.
+				Source: source,
 			}
 		case "template":
 			if reporter, err = report.NewTemplateReporter(reportTemplate); err != nil {

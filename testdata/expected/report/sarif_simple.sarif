@@ -53,7 +53,8 @@
       "email": "johndoe@gmail.com",
       "author": "John Doe",
       "date": "10-19-2003",
-      "commitMessage": "opps"
+      "commitMessage": "opps",
+      "gitleaksFingerprint/v1": "ac98a39231b6ce88328f654965cf56fb47866dfac891582e10727a384d964a3f"
      },
      "properties": {
       "tags": [
